@@ -6,15 +6,16 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import datastructuresinterface.LinkedList;
-import functionalprograms.Utility;
+
+import datastructures.LinkedList;
+import utility.UtilityMethods;
 
 public class UnorderedList 
 {
 	public static void main(String[] args) throws FileNotFoundException
 	{
 		LinkedList linkL = new LinkedList();
-		String path = "/home/admin1/eclipse-workspace/nikhiljain/nikhil.txt";
+		String path = "/home/admin1/eclipse-workspace/nikhiljain/unorderedlist.txt";
 		BufferedReader buffer = new BufferedReader(new FileReader(path));
 		String s ="";
 		try 
@@ -24,22 +25,22 @@ public class UnorderedList
 			
 			for(int i = 0; i < str.length; i++)
 			{
-				linkL.insert(str[i]);
+				linkL.add(str[i]);
 			}
 			
 			System.out.println("Word-List from file:");
 			linkL.displayList();
-			String key = Utility.stringInput("\nEnter word to find: ");
-			boolean value = linkL.isWordPresent(key);
+			String key = UtilityMethods.stringInput("\nEnter word to find: ");
+			boolean value = linkL.search(key);
 			if(value)
 			{
 				System.out.println("element found and deleted!");
-				linkL.delete(key);
+				linkL.remove(key);
 			}
 			else
 			{
 				System.out.println("element not found but added");
-				linkL.insert(key);
+				linkL.add(key);
 			}
 			
 			System.out.println("\nNew Word-List:");
