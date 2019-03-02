@@ -1,12 +1,22 @@
 package datastructures;
 
-import datastructures.QueueUsingLinkedList.Node;
+import datastructures.LinkedList.Node;
 
+/**
+ * @purpose class declaration of week class for displaying calendar through stack and queue
+ * @author Nikhil Jain
+ * @version 1.0
+ */
 public class Week 
 {
 	public static QueueUsingLinkedList linkL = new QueueUsingLinkedList();
-	public static Node root = null;
+	public static datastructures.LinkedList.Node root = null;
 	
+	/**
+	 * @purpose WeekDay class structure for calendar
+	 * @author Nikhil Jain
+	 * @version 1.0
+	 */
 	public static class WeekDay
 	{
 		String day;
@@ -21,6 +31,7 @@ public class Week
 			link = null;
 		}
 		
+		// getter method to return date
 		public String getDate()
 		{
 			return date;

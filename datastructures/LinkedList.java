@@ -2,30 +2,66 @@ package datastructures;
 
 import datastructures.Week.WeekDay;
 
+/**
+ * @purpose class declaration of Linked List Abstract data type
+ * @author Nikhil Jain
+ * @version 1.0
+ */
 public class LinkedList 
 {
-	public static class Node 
+	/**
+	 * @purpose creating node structure of linked list
+	 * @author Nikhil Jain
+	 * @version 1.0
+	 */
+	
+	public static class Node
 	{
-		public String data;
+		public WeekDay weekday;
+		public String element;
+		private int amount;
+		public String day;
+		public String date;
 		public Node link;
-		WeekDay weekday;
 		
-		// constructor
-		public Node (String d)
+		public Node(String p, int a)
 		{
-			data = d;
-			link = null; 								// link of node will be null by default
+			element = p;
+			amount = a;
+			link = null;
 		}
-
+		
+		public Node(String p)
+		{
+			element = p;
+			link = null;
+		}
+				
+		public Node (String d1, String d2)
+		{
+			day = d1;
+			date = d2;
+			link = null;
+		}
+		
 		public Node(WeekDay wd)
 		{
 			weekday = wd;
 		}
 		
+		public int getAmount()
+		{
+			return amount;
+		}
 	}
 	
+	// creating root node
 	public Node root;
 	
+	/**
+	 * @purpose returns true if linked list is empty else returns false
+	 * @return boolean
+	 */
 	public boolean isEmpty()
 	{
 		if(root == null)
@@ -35,7 +71,11 @@ public class LinkedList
 		return false;
 	}
 	
-	// insert the new string to linked list
+	/**
+	 * @purpose adds new node to the linked list
+	 * @param data  // element to be inserted in the node
+	 * @return void
+	 */
 	public void add(String data)
 	{
 		Node temp = new Node(data);
@@ -55,7 +95,10 @@ public class LinkedList
 		}
 	}
 	
-	// displays the list
+	/**
+	 * @purpose displays the list
+	 * @return void
+	 */
 	public void displayList()
 	{
 		if(isEmpty())
@@ -68,13 +111,19 @@ public class LinkedList
 			p =root;
 			while(p != null)
 			{
-				System.out.print(p.data + " ");
+				System.out.print(p.element + " ");
 				p = p.link;
 			}
 			System.out.println();
 		}
 	}
 	
+	/**
+	 * @purpose searches the specified element
+	 * 			returns true if element is found else returns false
+	 * @param key
+	 * @return boolean
+	 */
 	public boolean search(String key)
 	{
 		if(isEmpty())
@@ -85,7 +134,7 @@ public class LinkedList
 		{
 			Node p;
 			p = root;
-			while(p.data.compareTo(key) != 0)
+			while(p.element.compareTo(key) != 0)
 			{
 				if(p.link == null)
 				{
@@ -93,7 +142,7 @@ public class LinkedList
 				}
 				p = p.link;
 			}
-			if(p.data.compareTo(key) == 0)
+			if(p.element.compareTo(key) == 0)
 			{
 				return true;
 			}	
@@ -101,6 +150,11 @@ public class LinkedList
 		return false;
 	}
 	
+	/**
+	 * @purpose removes the specified element from the linked list
+	 * @param key
+	 * @return void
+	 */
 	public void remove(String key)
 	{
 		if(isEmpty())
@@ -112,7 +166,7 @@ public class LinkedList
 			Node p,q;
 			p = root; q = root;
 			int count = 1;
-			while(p.data.compareTo(key) != 0)
+			while(p.element.compareTo(key) != 0)
 			{
 				p = p.link;
 				count++;
@@ -122,14 +176,14 @@ public class LinkedList
 				}
 			}
 			
-			if(p.data.compareTo(key) == 0)
+			if(p.element.compareTo(key) == 0)
 			{
 				System.out.println("Element found at node " + count );
 				if(count == 1)
 				{
 					root = p.link;
 					p.link = null;
-					System.out.println("Element deleted: " + p.data);
+					System.out.println("Element deleted: " + p.element);
 					count--;
 				}
 				else
@@ -140,13 +194,17 @@ public class LinkedList
 					}
 					q.link = p.link;
 					p.link = null;
-					System.out.println("\nElement deleted: " + p.data);
+					System.out.println("\nElement deleted: " + p.element);
 					count--;
 				}//end of inner-most if-else
 			}//end of inner if block
 		}//end of outer if-else
 	}
 	
+	/**
+	 * @purpose appends the elements of linked list to string
+	 * @return String
+	 */
 	public String toString()
 	{
 		Node p;
@@ -154,12 +212,16 @@ public class LinkedList
 		String s = "";
 		while(p != null)
 		{
-			s = s + p.data + " ";
+			s = s + p.element + " ";
 			p = p.link;
 		}
 		return s;
 	}
 	
+	/**
+	 * @purpose sorts the elements of linked list and makes list ordered
+	 * @return void
+	 */
 	public void sortElements()
 	{
 		if(isEmpty())
@@ -175,16 +237,16 @@ public class LinkedList
 				 j = root;
 				while(j.link != null)
 				{
-					int jNum = Integer.parseInt(j.data);
-					int jNextNum = Integer.parseInt(j.link.data), temp;
+					int jNum = Integer.parseInt(j.element);
+					int jNextNum = Integer.parseInt(j.link.element), temp;
 					if(jNum > jNextNum)						
 					{
 						temp = jNum;					
 						jNum = jNextNum;					
 						jNextNum = temp;								
 					}
-					j.data = String.valueOf(jNum);
-					j.link.data = String.valueOf(jNextNum);
+					j.element = String.valueOf(jNum);
+					j.link.element = String.valueOf(jNextNum);
 					
 					j = j.link;
 				}//end of inner while loop

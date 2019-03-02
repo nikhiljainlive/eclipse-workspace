@@ -1,10 +1,19 @@
 package datastructures;
 
+/**
+ * @purpose class declaration of Stack Abstract data type implemented using array
+ * @author Nikhil Jain
+ * @version 1.0
+ */
 public class StackUsingArray 
 {
-	char[] stack = new char[10];
-	int top = -1;
+	char[] stack = new char[10];						// declaring array
+	int top = -1;			
 	
+	/**
+	 * @purpose returns true if stack is empty else returns false
+	 * @return boolean
+	 */
 	public boolean isEmpty()
 	{
 		if(top == -1)
@@ -14,6 +23,10 @@ public class StackUsingArray
 		return false;
 	}
 	
+	/**
+	 * @purpose returns true if stack is full else returns false
+	 * @return boolean
+	 */
 	public boolean isFull()
 	{
 		if(top == stack.length-1 )
@@ -23,6 +36,10 @@ public class StackUsingArray
 		return false;
 	}
 	
+	/**
+	 * @purpose pushes the element to stack
+	 * @param item
+	 */
 	public void push(char item)
 	{
 		if(isFull())
@@ -36,6 +53,10 @@ public class StackUsingArray
 		}
 	}
 	
+	/**
+	 * @purpose pops the element from the queue
+	 * @return void
+	 */
 	public void pop()
 	{
 		if(isEmpty())
@@ -49,6 +70,10 @@ public class StackUsingArray
 		}
 	}
 	
+	/**
+	 * @purpose returns the top element in the queue
+	 * @return char
+	 */
 	public char peek()
 	{
 		if(isEmpty())
@@ -61,6 +86,10 @@ public class StackUsingArray
 		}
 	}
 	
+	/**
+	 * @purpose returns the total number of elements in stack
+	 * @return int
+	 */
 	public int size()
 	{
 		int count = 0;
@@ -73,6 +102,10 @@ public class StackUsingArray
 		return count;
 	}
 	
+	/**
+	 * @purpose displays the elements in stack
+	 * @return void
+	 */
 	public void display()
 	{
 		if(isEmpty())

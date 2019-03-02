@@ -1,53 +1,27 @@
 package datastructures;
 
+import datastructures.LinkedList.Node;
 import datastructures.Week.WeekDay;
 
+/**
+ * @purpose class declaration of Queue Abstract Data Type
+ * 			implemented using linked list
+ * @author Nikhil Jain
+ * @version 1.0
+ */
 public class QueueUsingLinkedList
 {
-	public static class Node
-	{
-		WeekDay weekday;
-		String person;
-		private int amount;
-		String day;
-		String date;
-		Node link;
-		
-		public Node(String p, int a)
-		{
-			person = p;
-			amount = a;
-			link = null;
-		}
-		
-		public Node(String p)
-		{
-			person = p;
-			link = null;
-		}
-				
-		public Node (String d1, String d2)
-		{
-			day = d1;
-			date = d2;
-			link = null;
-		}
-		
-		public Node(WeekDay wd)
-		{
-			weekday = wd;
-		}
-		
-		public int getAmount()
-		{
-			return amount;
-		}
-	}
 	
-	public Node front = null;
-	public Node rear = null;
 	
-	public boolean isEmpty()
+	// static node objects - front and rear assigned as null
+	public static Node front = null;
+	public static Node rear = null;
+	
+	/**
+	 * @purpose returns true if queue is empty else returns false
+	 * @return boolean
+	 */
+	public static boolean isEmpty()
 	{
 		if(front == null && rear == null)
 		{
@@ -56,7 +30,12 @@ public class QueueUsingLinkedList
 		return false;
 	}
 	
-	public void enQueue(String p, int a)
+	/**
+	 * @purpose enqueues the element
+	 * @param p	// String value
+	 * @param a	// int value
+	 */
+	public static void enQueue(String p, int a)
 	{
 		Node temp = new Node(p, a);
 		if(isEmpty())
@@ -71,7 +50,11 @@ public class QueueUsingLinkedList
 		}	
 	}
 	
-	public void enQueue(String p)
+	/**
+	 * @purpose enqueues the element
+	 * @param p // String
+	 */
+	public static void enQueue(String p)
 	{
 		Node temp = new Node(p);
 		if(isEmpty())
@@ -86,7 +69,11 @@ public class QueueUsingLinkedList
 		}
 	}
 	
-	public String deQueue()
+	/**
+	 * @purpose dequeues the element
+	 * @return String // element dequeued
+	 */
+	public static String deQueue()
 	{
 		if(isEmpty())
 		{
@@ -94,7 +81,7 @@ public class QueueUsingLinkedList
 		}
 		else
 		{
-			String temp = front.person;
+			String temp = front.element;
 			front = front.link;
 			
 			if(front == rear.link)
@@ -106,7 +93,11 @@ public class QueueUsingLinkedList
 		}
 	}
 	
-	public void show()
+	/**
+	 * @purpose displays the total elements in queue
+	 * @return void
+	 */
+	public static void show()
 	{
 		if(isEmpty())
 		{
@@ -117,14 +108,18 @@ public class QueueUsingLinkedList
 			Node temp = front;
 			while(temp != null)
 			{
-				System.out.println("\n" + temp.person);
-				System.out.println(temp.amount);
+				System.out.println("\n" + temp.element);
+				System.out.println(temp.getAmount());
 				temp = temp.link;
 			}	
 		}
 	}
 	
-	public int size()
+	/**
+	 * @purpose calculates the size of queue
+	 * @return int
+	 */
+	public static int size()
 	{
 		Node temp;
 		temp = front;
@@ -138,16 +133,24 @@ public class QueueUsingLinkedList
 		return count;
 	}
 	
-	public String front()
+	/**
+	 * @purpose displays the front element in the queue
+	 * @return String
+	 */
+	public static String front()
 	{
 		if(isEmpty())
 		{
 			String s = "queue is empty!";
 			return s;
 		}
-		return front.person;
+		return front.element;
 	}
 	
+	/**
+	 * @purpose enqueues the WeekDay object to queue
+	 * @param wd // object of WeekDay class
+	 */
 	public void enQueueWeekDay(WeekDay wd)
 	{
 		Node temp = new Node(wd);
@@ -164,6 +167,10 @@ public class QueueUsingLinkedList
 			
 	}
 	
+	/**
+	 * @purpose dequeues the WeekDay object
+	 * @return String // date variable of WeekDay object
+	 */
 	public String deQueueWeekDay()
 	{
 		if(isEmpty())
@@ -184,6 +191,10 @@ public class QueueUsingLinkedList
 		}
 	}
 	
+	/**
+	 * @purpose displays the Calendar
+	 * @return void
+	 */
 	public void showWeekDay()
 	{
 		if(isEmpty())
@@ -212,8 +223,8 @@ public class QueueUsingLinkedList
 				}
 				p = p.link;
 			}
+			
 			System.out.println();
 		}
 	}
-	
 }

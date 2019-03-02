@@ -2,12 +2,21 @@ package datastructures;
 
 import datastructures.LinkedList.*;
 
+/**
+ * @purpose Class declaration of stack abstract data type implemented using Linked List
+ * @author Nikhil Jain
+ * @version 1.0
+ */
 public class StackUsingLinkedList
 {
 	Node root = null;
 	Node top = root;
 	public static LinkedList linkL = new LinkedList();
 	
+	/**
+	 * @purpose returns true if stack is empty else returns false
+	 * @return boolean
+	 */
 	public boolean isEmpty()
 	{
 		if(root == null)
@@ -17,7 +26,10 @@ public class StackUsingLinkedList
 		return false;
 	}
 	
-	// pushes the string
+	/**
+	 * @purpose pushes the string
+	 * @param item
+	 */
 	public void push(String item)
 	{
 		Node temp = new Node(item);
@@ -37,7 +49,10 @@ public class StackUsingLinkedList
 		}
 	}
 	
-	// pops the string element
+	/**
+	 * @purpose pops the string element
+	 * @return String // element popped
+	 */
 	public String pop()
 	{
 		if(isEmpty())
@@ -55,7 +70,7 @@ public class StackUsingLinkedList
 				}
 				p = p.link;
 			}
-			String topData = top.data;
+			String topData = top.element;
 			p.link = null;
 			top = p;
 			
@@ -63,7 +78,10 @@ public class StackUsingLinkedList
 		}
 	}
 	
-	// shows the element
+	/**
+	 * @purpose shows the element
+	 * @return void 
+	 */
 	public void show()
 	{
 		if(isEmpty())
@@ -75,18 +93,25 @@ public class StackUsingLinkedList
 			Node p = root;
 			while(p != null)
 			{
-				System.out.println(p.data);
+				System.out.println(p.element);
 				p = p.link;
 			}
 		}
 	}
 	
-	// shows the front data
+	/**
+	 * @purpose returns the front element
+	 * @return String
+	 */
 	public String peek()
 	{
-		return top.data;
+		return top.element;
 	}
 	
+	/**
+	 * @purpose returns the total number of elements in stack
+	 * @return int
+	 */
 	public int size()
 	{
 		if(isEmpty())

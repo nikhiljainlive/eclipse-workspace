@@ -1,11 +1,24 @@
 package datastructures;
 
+/**
+ * @purpose class declaration for Deque Abstract data Type
+ * @author Nikhil Jain
+ * @version 1.0
+ */
 public class Deque
 {
+	/* static variables - capacity of queue
+	 * 					- declaration of String array for deque
+	 * 					- defining value of front and rear of deque as -1
+	 */ 
 	public static int capacity = 100;
 	public static String[] deQue = new String[capacity];
 	public static int front = -1, rear = -1;
 	
+	/**
+	 * @purpose returns true if deque is empty else returns false
+	 * @return boolean
+	 */
 	public boolean isEmpty()
 	{
 		if(front == -1 && rear == -1)
@@ -15,6 +28,10 @@ public class Deque
 		return false;
 	}
 	
+	/**
+	 * @purpose returns true if queue is full else returns false
+	 * @return boolean
+	 */
 	public boolean isFull()
 	{
 		if(rear == deQue.length)
@@ -24,6 +41,11 @@ public class Deque
 		return false;
 	}
 	
+	/**
+	 * @purpose adds the element from front
+	 * @param item
+	 * @return void
+	 */
 	public void addFront(String item)
 	{
 		if(isFull())
@@ -50,6 +72,11 @@ public class Deque
 		}
 	}
 	
+	/**
+	 * @purpose adds the element from rear
+	 * @param item
+	 * @return void
+	 */
 	public void addRear(String item)
 	{
 		if(isFull())
@@ -73,6 +100,11 @@ public class Deque
 		}
 	}
 	
+	/**
+	 * @purpose remove the element from rear
+	 * @param void
+	 * @return String  	// element removed
+	 */
 	public String removeRear()
 	{
 		if(isEmpty())
@@ -92,6 +124,11 @@ public class Deque
 		}
 	}
 	
+	/**
+	 * @purpose remove the element from rear
+	 * @param void
+	 * @return String 	// element removed
+	 */
 	public String removeFront()
 	{
 		if(isEmpty())
@@ -112,6 +149,10 @@ public class Deque
 		}
 	}
 	
+	/**
+	 * @purpose displays the deque
+	 * @return void
+	 */
 	public void show()
 	{
 		if(isEmpty())
@@ -127,6 +168,10 @@ public class Deque
 		}
 	}
 	
+	/**
+	 * @purpose calculates the elements present in deque
+	 * @return int
+	 */
 	public int size()
 	{
 		if(isEmpty())
@@ -141,6 +186,10 @@ public class Deque
 		}
 	}
 	
+	/**
+	 * @purpose appends the elements to String
+	 * @return String
+	 */
 	public String toString()
 	{
 		String result = "";
