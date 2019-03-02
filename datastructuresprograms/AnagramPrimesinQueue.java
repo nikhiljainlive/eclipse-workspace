@@ -2,24 +2,31 @@ package datastructuresprograms;
 
 import datastructures.QueueUsingLinkedList;
 
+/**
+ * @purpose class declaration of printing Anagram primes from queue
+ * @author Nikhil Jain
+ * @version 1.0
+ */
 public class AnagramPrimesinQueue
-{
-	public static QueueUsingLinkedList queue = new QueueUsingLinkedList();
-	
+{	
+	/**
+	 * @purpose prints the anagram prime numbers from queue
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{
-		String[] strA = AnagramPrimes.anaPrimes.split(" ");
+		String[] strA = AnagramPrimes2DArray.anaPrimes.split(" ");
 		
 		for(int i = 1; i < strA.length; i++)
 		{
-			queue.enQueue(strA[i]);
+			QueueUsingLinkedList.enQueue(strA[i]);						// enqueueing elements in queue
 		}
-		System.out.println("Anagrams displayed through Queue:");
-		int length = queue.size();
+		System.out.println("Anagram Primes displayed through Queue:");
+		int length = QueueUsingLinkedList.size();
 		
-		for(int i = 0; i < length; i++)
-		{
-			System.out.print(queue.deQueue() + " ");
+		for(int i = 0; i < length; i++)									// showing anagram prime numbers 
+		{																// by dequeueing elements from queue
+			System.out.print(QueueUsingLinkedList.deQueue() + " ");
 			
 		}
 	}

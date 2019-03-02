@@ -1,12 +1,10 @@
 package datastructuresprograms;
 
 import datastructures.QueueUsingLinkedList;
-import utility.DataStructuresUtility;
 import utility.UtilityMethods;
 
 public class BankingCashCounter
 {
-	public static QueueUsingLinkedList queue = new QueueUsingLinkedList();
 	public static int bankCash = UtilityMethods.input("enter banking counter cash : ");
 	
 	public static void main(String[] args) 
@@ -25,19 +23,19 @@ public class BankingCashCounter
 				System.out.println("\n*************************************************");
 				switch(UtilityMethods.input("\nenter choice: "))
 				{
-					case 1: DataStructuresUtility.depositMoney();
+					case 1: depositMoney();
 							break;
 							
-					case 2: DataStructuresUtility.withdrawMoney();
+					case 2: withdrawMoney();
 							break;
 							
-					case 3:	DataStructuresUtility.processAmount();
+					case 3:	processAmount();
 							break;
 							
-					case 4: queue.show();
+					case 4: QueueUsingLinkedList.show();
 							break;
 							
-					case 5: System.out.println("\nPerson at front: " + queue.front());
+					case 5: System.out.println("\nPerson at front: " + QueueUsingLinkedList.front());
 							break;
 							
 					default: System.out.println("\ninvalid option.. try again");
@@ -47,6 +45,37 @@ public class BankingCashCounter
 		catch(Exception e)
 		{
 			System.out.println(e.getMessage());
+		}
+	}
+	
+	public static void depositMoney()
+	{
+		String person = UtilityMethods.stringInput("enter person to queue: ");
+		int amount = UtilityMethods.input("enter amount: ");
+		QueueUsingLinkedList.enQueue(person, amount);
+		System.out.println("\n'" + person + "' added to queue");
+	}
+	
+	public static void withdrawMoney()
+	{
+		String person = UtilityMethods.stringInput("enter person to queue: ");
+		int amount = UtilityMethods.input("enter amount: ");
+		QueueUsingLinkedList.enQueue(person, -(amount));
+		System.out.println("\n'" + person + "' added to queue");
+	}
+	
+	public static void processAmount()
+	{
+		if(QueueUsingLinkedList.isEmpty())
+		{
+			System.out.println("\nqueue is empty\nenter a person to deposit or withdraw cash!");
+		}
+		else
+		{
+			BankingCashCounter.bankCash = BankingCashCounter.bankCash + QueueUsingLinkedList.front.getAmount();
+			System.out.println("\nUpdated Banking Counter Cash: " + BankingCashCounter.bankCash);
+			System.out.println("Person dequeued: " + QueueUsingLinkedList.deQueue());
+			System.out.println("People in Queue: " + QueueUsingLinkedList.size());
 		}
 	}
 }

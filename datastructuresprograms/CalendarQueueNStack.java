@@ -11,6 +11,7 @@ public class CalendarQueueNStack
 	public static String [] monthString = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 	public static String[] daysString = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
 	
+	// returns the days in a specified month
 	public static int getDays(int month, int year)
 	{
 		int days = 31;
@@ -68,43 +69,43 @@ public class CalendarQueueNStack
 	public static void printViaStack(int month, int year)
 	{
 		// creating 2 stacks
-				StackUsingLinkedList stack1 = new StackUsingLinkedList();
-				StackUsingLinkedList stack2 = new StackUsingLinkedList();
-				
-				// pushing elements into stack 1
-				for(int i = 0; i < 42; i++)
-				{
-					stack1.push(queue.deQueueWeekDay());
-				}
+		StackUsingLinkedList stack1 = new StackUsingLinkedList();
+		StackUsingLinkedList stack2 = new StackUsingLinkedList();
+		
+		// pushing elements into stack 1
+		for(int i = 0; i < 42; i++)
+		{
+			stack1.push(queue.deQueueWeekDay());
+		}
 
-				// popping elements from stack 1 and pushing them into stack 2
-				for(int i = 0; i < 42; i++)
-				{
-					stack2.push(stack1.pop());
-				}
-				
-				// popping the elements and printing Calendar from stack
-				System.out.println("__________________________\n\nCalendar using Stack!\n__________________________\n");
-				System.out.println("\t" + monthString[month] + " " + year + "\n");
-				System.out.println("S   M   T   W   Th  F   S");
-				int count = 0;												
-				for(int i = 0; i < 42; i++)									
-				{
-					count++;
-					if(stack2.peek().hashCode() < "10".hashCode())
-					{
-						System.out.print(stack2.pop() + "   ");			
-					}
-					else
-					{
-						System.out.print(stack2.pop() + "  ");		
-					}
-					
-					if(count % 7 == 0)
-					{
-						System.out.println();
-					}
-				}
+		// popping elements from stack 1 and pushing them into stack 2
+		for(int i = 0; i < 42; i++)
+		{
+			stack2.push(stack1.pop());
+		}
+		
+		// popping the elements and printing Calendar from stack
+		System.out.println("__________________________\n\nCalendar using Stack!\n__________________________\n");
+		System.out.println("\t" + monthString[month] + " " + year + "\n");
+		System.out.println("S   M   T   W   Th  F   S");
+		int count = 0;												
+		for(int i = 0; i < 42; i++)									
+		{
+			count++;
+			if(stack2.peek().hashCode() < "10".hashCode())
+			{
+				System.out.print(stack2.pop() + "   ");			
+			}
+			else
+			{
+				System.out.print(stack2.pop() + "  ");		
+			}
+			
+			if(count % 7 == 0)
+			{
+				System.out.println();
+			}
+		}
 	}
 	
 	// main method
@@ -117,6 +118,5 @@ public class CalendarQueueNStack
 		printViaQueue(m, y, noOfDays);
 		printViaStack(m, y);
 	}
-		
 }
 
