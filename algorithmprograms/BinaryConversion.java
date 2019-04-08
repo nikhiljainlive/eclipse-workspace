@@ -16,7 +16,7 @@ public class BinaryConversion
 	{
 		try
 		{
-			int n = UtilityMethods.input("enter the number: ");
+			int n = UtilityMethods.inputInt("enter the number: ");
 			toBinary1(n);
 		}
 		catch(NumberFormatException e)
@@ -57,7 +57,7 @@ public class BinaryConversion
 		else
 		{
 			System.out.println("enter numbers greater than zero");
-			int n = UtilityMethods.input("enter the number again: ");
+			int n = UtilityMethods.inputInt("enter the number again: ");
 			toBinary1(n);
 		}
 	}

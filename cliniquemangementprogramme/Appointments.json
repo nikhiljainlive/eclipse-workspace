@@ -1,0 +1,36 @@
+[ {
+  "doctorName" : "VENKATESH",
+  "patientName" : "MARUTHI",
+  "date" : "20/02/2019",
+  "docAppointmentCount" : 1
+}, {
+  "doctorName" : "VENKATESH",
+  "patientName" : "ROHAN",
+  "date" : "02/02/2019",
+  "docAppointmentCount" : 2
+}, {
+  "doctorName" : "VENKATESH",
+  "patientName" : "AJAY",
+  "date" : "02/02/2019",
+  "docAppointmentCount" : 3
+}, {
+  "doctorName" : "VENKATESH",
+  "patientName" : "ABHISHEK",
+  "date" : "02/02/2019",
+  "docAppointmentCount" : 4
+}, {
+  "doctorName" : "VENKATESH",
+  "patientName" : "AJAY",
+  "date" : "02/02/2019",
+  "docAppointmentCount" : 5
+}, {
+  "doctorName" : "NAKUL",
+  "patientName" : "MAHESH",
+  "date" : "02/02/2019",
+  "docAppointmentCount" : 1
+}, {
+  "doctorName" : "AKASH",
+  "patientName" : "MARUTHI",
+  "date" : "02/02/2019",
+  "docAppointmentCount" : 1
+} ]

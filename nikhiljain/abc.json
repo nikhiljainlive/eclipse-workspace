@@ -1,0 +1,19 @@
+{ 
+"rice" :[
+	{"name": "Annapoornna rice" ,"weight": 30, "price": 45},
+	{"name": "Basmati rice" ,"weight": 16, "price": 51},
+	{"name": "Hansraj rice" ,"weight": 18, "price": 40}
+	],
+
+"pulses" : [
+	{"name": "black eyed beans" ,"weight": 12 ,"price": 35},
+	{"name": "Dry Beans" ,"weight": 15 ,"price": 42},
+	{"name": "green grams" ,"weight": 11 ,"price": 44}
+	],
+
+"wheat" : [
+	{"name": "Common Wheat" ,"weight": 55 ,"price": 23},
+	{"name": "Spelt Wheat" ,"weight": 44 ,"price": 21},
+	{"name": "Emmer Wheat" ,"weight": 13 ,"price": 20}
+	]
+}

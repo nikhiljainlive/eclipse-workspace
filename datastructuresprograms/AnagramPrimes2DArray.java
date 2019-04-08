@@ -69,16 +69,15 @@ public class AnagramPrimes2DArray
 	 */
 	public static void printAnaPrimes()
 	{
-		// prints the 2D array
-				System.out.println("Prime Anagrams ranges from 0-1000 are:\n");
-				for(int i = 0; i < str2DArray.length; i++)
-				{
-					System.out.print("Range: " + DataStructuresUtility.multiply(i, 100) + "-" + DataStructuresUtility.multiply(i+1, 100) + " | " );
-					for(int j = 0; j < str2DArray[0].length; j++)
-					{
-						System.out.print(str2DArray[i][j] + " ");
-					}
-					System.out.println();
-				}
+		System.out.println("Prime Anagrams ranges from 0-1000 are:\n");
+		for(int i = 0; i < str2DArray.length; i++)
+		{
+			System.out.print("Range: " + DataStructuresUtility.multiply(i, 100) + "-" + DataStructuresUtility.multiply(i+1, 100) + " | " );
+			for(int j = 0; j < str2DArray[0].length; j++)
+			{
+				System.out.print(str2DArray[i][j] + " ");
+			}
+			System.out.println();
+		}
 	}
 }

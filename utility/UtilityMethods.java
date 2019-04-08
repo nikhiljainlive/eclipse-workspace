@@ -24,7 +24,7 @@ public class UtilityMethods
 	
 	// takes the input from user 
 	//and checks if it is not other than integer
-	public static int input(String s)
+	public static int inputInt(String s)
 	{
 		try
 		{
@@ -40,6 +40,24 @@ public class UtilityMethods
 			return 0;
 		}
 	}
+	
+	// takes the Long input
+	public static long inputLong(String s)
+	{
+		System.out.print(s);
+		long longNum = scan.nextLong();
+		
+		return longNum;
+	} 
+		
+	// takes the string input
+	public static String stringInput(String s)
+	{
+		System.out.print(s);
+		String string = scan.nextLine();
+		
+		return string;
+	} 
 	
 	// returns true if input string is integer otherwise returns false
 	public static boolean isInteger(String s)
@@ -104,15 +122,6 @@ public class UtilityMethods
 		return true;											// returns true if all above conditions fails
 	}
 	
-	// takes the string input
-	public static String stringInput(String s)
-	{
-		System.out.print(s);
-		String string = scan.nextLine();
-		
-		return string;
-	} 
-	
 	// returns true if entered year is leap year else returns false
 	public static boolean isLeapYear(int year)
 	{
@@ -167,7 +176,7 @@ public class UtilityMethods
 		{
 			for (int i = 0; i < capacity; i++)
 			{
-				a[i] = input("Enter element (" + (i+1) + ") : ");
+				a[i] = inputInt("Enter element (" + (i+1) + ") : ");
 			}	
 		}
 		catch(NumberFormatException e)											// handles exception if user input is other than integer

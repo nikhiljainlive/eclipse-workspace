@@ -1,0 +1,9 @@
+[ {
+  "firstName" : "NIKHIL",
+  "lastName" : "JAIN",
+  "address" : "BHOPAL",
+  "city" : "BHOPLA",
+  "state" : "MP",
+  "zip" : "464228",
+  "phone" : "8871152221"
+} ]

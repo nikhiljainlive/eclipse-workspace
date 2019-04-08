@@ -26,7 +26,7 @@ public class Binary
 	{
 		try 
 		{
-			int num = UtilityMethods.input("enter number: ");
+			int num = UtilityMethods.inputInt("enter number: ");
 			if(num > 0)
 			{
 				int binnum = BinaryConversion.toBinary(num);

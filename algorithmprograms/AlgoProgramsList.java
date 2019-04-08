@@ -54,7 +54,7 @@ public class AlgoProgramsList
 		{
 			try
 			{
-				switch(UtilityMethods.input("===============================================================================================\n(enter 0 for Main Menu or -1 to re-display current menu)\n\nenter choice (Alogirthm Programs menu): "))
+				switch(UtilityMethods.inputInt("===============================================================================================\n(enter 0 for Main Menu or -1 to re-display current menu)\n\nenter choice (Alogirthm Programs menu): "))
 				{
 					case -1: programList();									// prints the program list again
 							break;

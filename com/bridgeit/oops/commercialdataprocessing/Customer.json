@@ -1,0 +1,36 @@
+[ {
+  "name" : "NIKHIL",
+  "relianceShares" : 20,
+  "hdfcShares" : 10,
+  "iciciShares" : 40
+}, {
+  "name" : "AJAY",
+  "relianceShares" : 0,
+  "hdfcShares" : 0,
+  "iciciShares" : 0
+}, {
+  "name" : "KARAN",
+  "relianceShares" : 0,
+  "hdfcShares" : 0,
+  "iciciShares" : 0
+}, {
+  "name" : "AMIT",
+  "relianceShares" : 0,
+  "hdfcShares" : 0,
+  "iciciShares" : 0
+}, {
+  "name" : "Venkatesh",
+  "relianceShares" : 0,
+  "hdfcShares" : 0,
+  "iciciShares" : 0
+}, {
+  "name" : "MARUTHI",
+  "relianceShares" : 0,
+  "hdfcShares" : 0,
+  "iciciShares" : 0
+}, {
+  "name" : "VENKATESH",
+  "relianceShares" : 10,
+  "hdfcShares" : 0,
+  "iciciShares" : 10
+} ]

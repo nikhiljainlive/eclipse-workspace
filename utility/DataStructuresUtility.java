@@ -1,9 +1,11 @@
 package utility;
 
+import datastructures.QueueUsingLinkedList;
+import datastructuresprograms.BankingCashCounter;
+
 public class DataStructuresUtility
 {
 	public static String[][] primeNum = new String[10][30];
-	//public static QueueUsingLinkedList queue = new QueueUsingLinkedList();
 	
 	public static String[][] primeNum()
 	{
@@ -51,5 +53,57 @@ public class DataStructuresUtility
 				}
 			}
 		}
+	}
+	
+	public static void depositMoney()
+	{
+		String person = UtilityMethods.stringInput("enter person to queue: ");
+		int amount = UtilityMethods.inputInt("enter amount: ");
+		QueueUsingLinkedList.enQueue(person, amount);
+		System.out.println("\n'" + person + "' added to queue");
+	}
+	
+	public static void withdrawMoney()
+	{
+		String person = UtilityMethods.stringInput("enter person to queue: ");
+		int amount = UtilityMethods.inputInt("enter amount: ");
+		QueueUsingLinkedList.enQueue(person, -(amount));
+		System.out.println("\n'" + person + "' added to queue");
+	}
+	
+	public static void processAmount()
+	{
+		if(QueueUsingLinkedList.isEmpty())
+		{
+			System.out.println("\nqueue is empty\nenter a person to deposit or withdraw cash!");
+		}
+		else
+		{
+			BankingCashCounter.bankCash = BankingCashCounter.bankCash + QueueUsingLinkedList.front.getAmount();
+			System.out.println("\nUpdated Banking Counter Cash: " + BankingCashCounter.bankCash);
+			System.out.println("Person dequeued: " + QueueUsingLinkedList.deQueue());
+			System.out.println("People in Queue: " + QueueUsingLinkedList.size());
+		}
+	}
+	
+	// returns the days in a specified month
+	public static int getDays(int month, int year)
+	{
+		int days = 31;
+		if(month == 2 && UtilityMethods.isLeapYear(year))
+		{
+			days = 29;
+		}
+		else if(month == 2)
+		{
+			days = 28;
+		}
+		
+		if(month == 4 || month == 6 || month == 9 || month == 11)
+		{
+			days = 30;
+		}
+		
+		return days;
 	}
 }

@@ -1,0 +1,57 @@
+[ {
+  "firstName" : "ABHISHEK",
+  "lastName" : "RS",
+  "address" : "BANGALORE",
+  "city" : "BANGALORE",
+  "state" : "KARNATAKA",
+  "zip" : "123456",
+  "phone" : "1234567890"
+}, {
+  "firstName" : "ADITYA",
+  "lastName" : "SHARMA",
+  "address" : "BHOPLA",
+  "city" : "BHOPAL",
+  "state" : "MP",
+  "zip" : "333333",
+  "phone" : "1234567890"
+}, {
+  "firstName" : "CHANDU",
+  "lastName" : "RS",
+  "address" : "BANGALORE",
+  "city" : "BANGALORE",
+  "state" : "KARNATAKA",
+  "zip" : "123456",
+  "phone" : "1234567890"
+}, {
+  "firstName" : "MARUTHI",
+  "lastName" : "RS",
+  "address" : "BANGALORE",
+  "city" : "BANGALORE",
+  "state" : "KARNATAKA",
+  "zip" : "123456",
+  "phone" : "1234567890"
+}, {
+  "firstName" : "MURLI",
+  "lastName" : "RS",
+  "address" : "BANGALORE",
+  "city" : "BANGALORE",
+  "state" : "KARNATAKA",
+  "zip" : "123456",
+  "phone" : "1234567890"
+}, {
+  "firstName" : "NIKHIL",
+  "lastName" : "JAIN",
+  "address" : "BHOPAL",
+  "city" : "BHOPAL",
+  "state" : "MADHYA PRADESH",
+  "zip" : "464228",
+  "phone" : "8871152221"
+}, {
+  "firstName" : "VENKATESH",
+  "lastName" : "RS",
+  "address" : "BANGALORE",
+  "city" : "BANGALORE",
+  "state" : "KARNATAKA",
+  "zip" : "123456",
+  "phone" : "1234567890"
+} ]

@@ -1,0 +1,61 @@
+[ {
+  "name" : "VENKATESH",
+  "id" : 1,
+  "specialization" : "NUEROLOGIST",
+  "avl" : "6AM"
+}, {
+  "name" : "ADITYA",
+  "id" : 2,
+  "specialization" : "ORTHOLOGIST",
+  "avl" : "9AM"
+}, {
+  "name" : "RAVI",
+  "id" : 3,
+  "specialization" : "pyschologist",
+  "avl" : "11AM"
+}, {
+  "name" : "MURLI",
+  "id" : 4,
+  "specialization" : "CHILD SPECIALIST",
+  "avl" : "6PM"
+}, {
+  "name" : "MARUTHI",
+  "id" : 5,
+  "specialization" : "HEART SPECIALIST",
+  "avl" : "8PM"
+}, {
+  "name" : "VIVEK",
+  "id" : 6,
+  "specialization" : "PHYSICIAN",
+  "avl" : "10AM"
+}, {
+  "name" : "ASHOK",
+  "id" : 7,
+  "specialization" : "CARDIOLOGIST",
+  "avl" : "3AM"
+}, {
+  "name" : "DHANUSH",
+  "id" : 12,
+  "specialization" : "ORTHOLOGIST",
+  "avl" : "3AM"
+}, {
+  "name" : "AHETESHAM",
+  "id" : 22,
+  "specialization" : "AYUVERDA",
+  "avl" : "6AM"
+}, {
+  "name" : "AKASH",
+  "id" : 32,
+  "specialization" : "CHILD SPECIALIST",
+  "avl" : "6AM"
+}, {
+  "name" : "NAKUL",
+  "id" : 33,
+  "specialization" : "ORTHOLOGIST",
+  "avl" : "6PM"
+}, {
+  "name" : "RAKESH",
+  "id" : 12,
+  "specialization" : "PSYCHOLOGIST",
+  "avl" : "3AM"
+} ]

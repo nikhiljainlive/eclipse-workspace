@@ -1,0 +1,13 @@
+{
+"rice": [{"name" : "Anapoorna Rice",  "weight" : 15 , "price": 12 },
+ {"name" : "Hansraj Rice",  "weight" :  22, "price": 34}, 
+{"name" : "High Rice",  "weight" : 23 , "price": 45} ], 
+
+"pulses": [{"name" : "Tuar Dal",  "weight" :  13, "price": 19 },
+ {"name" : "Arhar dal",  "weight" : 22 , "price": 41}, 
+{"name" : "Black Beans",  "weight" :  14, "price": 13} ], 
+
+ "wheat" : [{"name" : "Ashirwad Wheat",  "weight" : 25 , "price": 16},
+ {"name" : "Samrat Wheat",  "weight" :  18, "price": 11}, 
+{"name" : "Patanjali Wheat",  "weight" :  55, "price": 17} ] 
+} 

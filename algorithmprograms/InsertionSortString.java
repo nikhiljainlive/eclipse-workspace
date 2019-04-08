@@ -16,7 +16,7 @@ public class InsertionSortString
 	{
 		try 
 		{
-			int length = UtilityMethods.input("number of elements you want to enter: ");
+			int length = UtilityMethods.inputInt("number of elements you want to enter: ");
 			if(length > 0)
 			{
 				String[] strArray = new String[length];

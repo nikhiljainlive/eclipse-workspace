@@ -18,8 +18,8 @@ public class PAPrimeNumbers
 	{
 		try
 		{
-			int r1 = UtilityMethods.input("Enter initial range: ");
-			int r2 = UtilityMethods.input("Enter final range: ");
+			int r1 = UtilityMethods.inputInt("Enter initial range: ");
+			int r2 = UtilityMethods.inputInt("Enter final range: ");
 			String primeStr = UtilityMethods.getPrimeNumbers(r1, r2);				// returns prime numbers
 			
 			System.out.println("The Palindromic Primes are:");

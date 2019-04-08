@@ -1,30 +1,40 @@
 package datastructuresprograms;
 
+import utility.DataStructuresUtility;
 import utility.UtilityMethods;
 
+/**
+ * @purpose class declaration for printing calendar from 2D Array
+ * @author Nikhil Jain
+ * @version 1.0
+ */
 public class Calendar2DArray
 {
+	// declaring a 2D string array
+	public static String[][] cal = new String[6][7];
+	
+	/**
+	 * @purpose main method to display Calendar through 2D Array
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{
 		int m = Integer.parseInt(args[0]);
 		int y = Integer.parseInt(args[1]);
-		int days = 31;
-		if(m == 2 && UtilityMethods.isLeapYear(y))
-		{
-			days = 29;
-		}
-		else if(m == 2)
-		{
-			days = 28;
-		}
 		
-		if(m == 4 || m == 6 || m == 9 || m == 11)
-		{
-			days = 30;
-		}
-		
-		String[][] cal = new String[6][7];
-		int startDay = UtilityMethods.dayOfWeek(m, 1, y);
+		fillDatesinArray(m, y);
+		printCalendar2DArray(m, y);
+	}
+	
+	/**
+	 * @purpose fills the dates of calendar in 2D Array
+	 * @param month
+	 * @param year
+	 */
+	public static void fillDatesinArray(int month, int year)
+	{	
+		int days = DataStructuresUtility.getDays(month, year);
+		int startDay = UtilityMethods.dayOfWeek(month, 1, year);
 		int k = 1, i = 0;
 		
 		for(int j = 0; j < cal[0].length; j++)
@@ -57,11 +67,19 @@ public class Calendar2DArray
 			}
 			
 			i++;
-		}
-		
-		String [] month = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-		System.out.println("% java Calendar " + m + " " + y);
-		System.out.println(month[m] + " " + y);
+		}	
+	}
+	
+	/**
+	 * @purpose prints the calendar through 2D Array
+	 * @param month
+	 * @param year
+	 */
+	public static void printCalendar2DArray(int month, int year)
+	{
+		String [] monthArray = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+		System.out.println("% java Calendar " + month + " " + year);
+		System.out.println(monthArray[month] + " " + year);
 		System.out.println("S   M   T   W   Th  F   S");
 		for(int l = 0; l < cal.length; l++)
 		{
@@ -77,6 +95,7 @@ public class Calendar2DArray
 					System.out.print(cal[l][n] + "  ");
 				}
 			}
+			
 			System.out.println();
 		}
 	}

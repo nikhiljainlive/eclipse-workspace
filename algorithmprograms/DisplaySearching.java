@@ -22,7 +22,7 @@ public class DisplaySearching
 			System.out.println("1. Searching & Sorting on Integers");
 			System.out.println("2. Searching & Sorting on Strings");
 			
-			int ch = UtilityMethods.input("choose option: ");
+			int ch = UtilityMethods.inputInt("choose option: ");
 			
 			switch(ch)
 			{
@@ -66,7 +66,7 @@ public class DisplaySearching
 	public static class IntegerSearchNSort
 	{	
 		// size of array
-		public static int length = UtilityMethods.input("enter number of elements: ");
+		public static int length = UtilityMethods.inputInt("enter number of elements: ");
 		// creating integer array
 		public static int[] intArray = new int[length];
 		
@@ -113,7 +113,7 @@ public class DisplaySearching
 					System.out.println("Bubble Sort > Insertion Sort");
 				}
 				
-				int key = UtilityMethods.input("enter element to find: ");
+				int key = UtilityMethods.inputInt("enter element to find: ");
 				UtilityMethods.binarySearchInt(intArray, key);	
 			}
 			catch(NumberFormatException e)
@@ -133,7 +133,7 @@ public class DisplaySearching
 	public static class StringSearchnSort
 	{
 		// size of string array
-		public static int length = UtilityMethods.input("enter number of elements: ");
+		public static int length = UtilityMethods.inputInt("enter number of elements: ");
 		//creating string array
 		public static String[] strArray = new String[length];
 		

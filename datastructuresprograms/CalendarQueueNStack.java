@@ -3,39 +3,29 @@ package datastructuresprograms;
 import datastructures.QueueUsingLinkedList;
 import datastructures.StackUsingLinkedList;
 import datastructures.Week.WeekDay;
+import utility.DataStructuresUtility;
 import utility.UtilityMethods;
 
+/**
+ * @purpose class declaration of displaying calendar using stack and queue
+ * @author Nikhil Jain
+ * @version 1.0
+ */
 public class CalendarQueueNStack 
 {
 	public static QueueUsingLinkedList queue = new QueueUsingLinkedList();
 	public static String [] monthString = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 	public static String[] daysString = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
 	
-	// returns the days in a specified month
-	public static int getDays(int month, int year)
+	/**
+	 * @purpose prints calendar through queue
+	 * @param month
+	 * @param year
+	 * @param noOfDays
+	 */
+	public static void printViaQueue(int month, int year, int noOfDays)
 	{
-		int days = 31;
-		if(month == 2 && UtilityMethods.isLeapYear(year))
-		{
-			days = 29;
-		}
-		else if(month == 2)
-		{
-			days = 28;
-		}
-		
-		if(month == 4 || month == 6 || month == 9 || month == 11)
-		{
-			days = 30;
-		}
-		
-		return days;
-	}
-	
-	// prints calendar through queue
-	public static void printViaQueue(int m, int y, int noOfDays)
-	{
-		int startDay = UtilityMethods.dayOfWeek(m, 1, y);
+		int startDay = UtilityMethods.dayOfWeek(month, 1, year);
 		int k = 1;
 		for(int i = 0; i < 42; i++)
 		{
@@ -60,12 +50,16 @@ public class CalendarQueueNStack
 		
 		// printing calendar from queue
 		System.out.println("__________________________\n\nCalendar using Queue!\n__________________________\n");
-		System.out.println("\t" + monthString[m] + " " + y + "\n");
+		System.out.println("\t" + monthString[month] + " " + year + "\n");
 		System.out.println("S   M   T   W   Th  F   S");
 		queue.showWeekDay();
 	}
 	
-	// prints calendar through stack
+	/**
+	 * @purpose prints the calendar through stack
+	 * @param month
+	 * @param year
+	 */
 	public static void printViaStack(int month, int year)
 	{
 		// creating 2 stacks
@@ -108,15 +102,17 @@ public class CalendarQueueNStack
 		}
 	}
 	
-	// main method
+	/**
+	 * @purpose main method to display calendar
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{
 		int m = Integer.parseInt(args[0]);
 		int y = Integer.parseInt(args[1]);
-		int noOfDays = getDays(m, y);
+		int noOfDays = DataStructuresUtility.getDays(m, y);
 		
 		printViaQueue(m, y, noOfDays);
 		printViaStack(m, y);
 	}
 }
-

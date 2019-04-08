@@ -16,7 +16,7 @@ public class BubbleSort
 	{
 		try 
 		{
-			int arrLength = UtilityMethods.input("enter no. of elements: ");
+			int arrLength = UtilityMethods.inputInt("enter no. of elements: ");
 			if( arrLength > 0)
 			{
 				int[] a = new int[arrLength];

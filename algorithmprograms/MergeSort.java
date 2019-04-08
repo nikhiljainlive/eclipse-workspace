@@ -16,7 +16,7 @@ public class MergeSort
 	{
 		try
 		{	
-			int length = UtilityMethods.input("enter number of elements: ");
+			int length = UtilityMethods.inputInt("enter number of elements: ");
 			if(length > 0)
 			{
 				int[] intArray = new int[length];

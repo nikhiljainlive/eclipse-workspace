@@ -16,7 +16,7 @@ public class VendingMachine
 	{
 		try
 		{
-			int change = UtilityMethods.input("enter amount to change: ");
+			int change = UtilityMethods.inputInt("enter amount to change: ");
 			if(change > 0)
 			{
 				int[] notes = new int[] {1, 2, 5, 10, 50, 100, 500, 1000, 2000};

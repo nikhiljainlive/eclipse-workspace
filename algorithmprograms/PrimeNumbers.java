@@ -18,10 +18,10 @@ public class PrimeNumbers
 	{	
 		try
 		{
-			int r1 = UtilityMethods.input("Enter initial range: ");
+			int r1 = UtilityMethods.inputInt("Enter initial range: ");
 			if(r1 >= 0 && r1 <= 1000)
 			{
-				int r2 = UtilityMethods.input("Enter final range: ");
+				int r2 = UtilityMethods.inputInt("Enter final range: ");
 				if(r2 <= 1000 && r2 > r1)
 				{
 					System.out.println("Prime numbers within the given range are :");

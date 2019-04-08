@@ -14,7 +14,7 @@ public class SquareRoot
 	 */
 	public static void sqrt()
 	{
-		double c = UtilityMethods.input("enter num: ");
+		double c = UtilityMethods.inputInt("enter num: ");
 		double epsilon = 3.05902321E-7 ;
 		double t = -c;
 		
